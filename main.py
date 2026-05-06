@@ -59,11 +59,11 @@ for day in range(DAYS):
         # 3. SICAKLIK VE BOZULMA (Gün içinde sensörleri okuduk)
         if info[2] == 'Cold':
             if np.random.rand() > 0.9:  # %10 ihtimalle dolap ısınır (arıza/kapı açık kaldı)
-                temp = round(np.random.uniform(7.0, 12.0), 1)
+                temp = round(np.random.uniform(7.0, 12.0), 1) #arıza varsa 7-12 derece arasına geldi
             else:
-                temp = round(np.random.uniform(2.0, 5.0), 1)
+                temp = round(np.random.uniform(2.0, 5.0), 1) #arıza yoksa normal 2-5 derece arası
             # Soğuk üründe 7 derece üstü riskli
-            spoilage_factor = 1.15 if temp > 7.0 else 1.0
+            spoilage_factor = 1.15 if temp > 7.0 else 1.0 #sıcaklık 7 üstüne çıktıysa israf %15 arttı.
         else:
             # Kuru gıda için oda sıcaklığı (18-24 derece arası)
             temp = round(np.random.uniform(18.0, 24.0), 1)
