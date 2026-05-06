@@ -11,7 +11,7 @@ PRODUCTS = {
     # 1. Grup: High-Volume (Yüksek Hacimli)
     'Tomato': [1.5, 'Produce', 'Dry', 0.9, 150, 300, 'High-Volume'],
     'Mixed Greens': [2.0, 'Produce', 'Cold', 1.2, 100, 200, 'High-Volume'],
-    'Turkish Simit': [0.5, 'Bakery', 'Dry', 1.1, 150, 250, 'High-Volume'],  # Günlük taze lazım
+    'Turkish Simit': [0.5, 'Bakery', 'Dry', 1.1, 150, 250, 'High-Volume'],  
     'Sourdough Bread': [1.2, 'Bakery', 'Dry', 0.8, 80, 150, 'High-Volume'],
 
     # 2. Grup: Mid-Volume (Orta Hacimli)
@@ -89,7 +89,7 @@ for day in range(DAYS):
         row_data = {
             "Date": current_date.strftime("%Y-%m-%d"),
             "Product": prod,
-            "Stock_Tier": info[6],  # Excel'de kolay okunsun diye eklediğimiz kategori
+            "Stock_Tier": info[6],  
             "Category": info[1],
             "Unit_Cost_USD": info[0],
             "Initial_Stock": stock,
